@@ -1,6 +1,7 @@
 import { Button, Container, Typography } from "@material-ui/core";
 import Head from "next/head";
 import { useReducer } from "react";
+import NavBar from "../components/NavBar";
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <NavBar />
             <Container>
                 <Typography variant="h4" component="h1">
                     GERVICHSTORE.ID
