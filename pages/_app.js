@@ -1,4 +1,5 @@
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { ContextProvider } from "../context/AppContext";
 import "../styles/globals.css";
 
 const theme = createMuiTheme({
@@ -13,9 +14,11 @@ const theme = createMuiTheme({
 
 function MyApp({ Component, pageProps }) {
     return (
-        <ThemeProvider theme={theme}>
-            <Component {...pageProps} />;
-        </ThemeProvider>
+        <ContextProvider>
+            <ThemeProvider theme={theme}>
+                <Component {...pageProps} />;
+            </ThemeProvider>
+        </ContextProvider>
     );
 }
 

@@ -1,5 +1,6 @@
-import { Container, Typography } from "@material-ui/core";
+import { Button, Container, Typography } from "@material-ui/core";
 import Head from "next/head";
+import { useReducer } from "react";
 
 export default function Home() {
     return (
