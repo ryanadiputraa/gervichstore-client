@@ -1,18 +1,27 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useReducer } from "react";
 
 const AppContext = createContext();
 
 export let globalState = {
-    text: "blah",
-    test: 0,
+    cart: {
+        count: 0,
+        products: [],
+    },
+    notification: {
+        count: 0,
+        messages: [],
+    },
 };
 
-export const reducer = (state = globalState, action) => {
+export const reducer = (state, action) => {
     switch (action.type) {
-        case "INCREMENT":
+        case "ADD_TO_CART":
             return {
                 ...state,
-                test: state.test + 1,
+                cart: {
+                    count: state.cart.count + 1,
+                    products: [...state.cart.products, { name: action.input }],
+                },
             };
         default:
             return state;
@@ -21,9 +30,10 @@ export const reducer = (state = globalState, action) => {
 
 // context provider
 export const ContextProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(reducer, globalState);
     // context wrapper
     return (
-        <AppContext.Provider value={globalState}>
+        <AppContext.Provider value={{ state, dispatch }}>
             {children}
         </AppContext.Provider>
     );
