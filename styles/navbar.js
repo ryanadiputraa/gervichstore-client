@@ -14,12 +14,12 @@ const navbar = makeStyles((theme) => ({
         },
     },
     menuIcon: {
-        marginRight: 4,
+        marginRight: theme.spacing(0.8),
         [theme.breakpoints.up("sm")]: {
-            marginRight: 10,
+            marginRight: theme.spacing(2),
         },
         [theme.breakpoints.up("lg")]: {
-            marginRight: 30,
+            marginRight: theme.spacing(4),
         },
     },
     search: {
