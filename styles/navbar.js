@@ -3,6 +3,7 @@ import { fade, makeStyles } from "@material-ui/core/styles";
 const navbar = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
+        marginBottom: theme.spacing(4),
     },
     menuButton: {
         marginRight: theme.spacing(2),

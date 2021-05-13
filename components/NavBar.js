@@ -43,8 +43,9 @@ export default function NavBar() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem onClick={handleMenuClose}>Akun</MenuItem>
+            <MenuItem onClick={handleMenuClose}>Transaksi</MenuItem>
+            <MenuItem onClick={handleMenuClose}>Keluar</MenuItem>
         </Menu>
     );
 

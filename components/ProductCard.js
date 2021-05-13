@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { useAppContext } from "../context/AppContext";
 import productCard from "../styles/productCard";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 export default function ProductCard() {
     const styles = productCard();
@@ -41,13 +42,18 @@ export default function ProductCard() {
             <CardActions className={styles.productAction}>
                 <Button
                     onClick={() => dispatch({ type: "ADD_TO_CART" })}
+                    className={styles.actionButton}
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    endIcon={<AddShoppingCartIcon style={{ marginLeft: -8 }} />}
+                ></Button>
+                <Button
+                    className={styles.actionButton}
                     size="small"
                     variant="contained"
                     color="primary"
                 >
-                    Keranjang
-                </Button>
-                <Button size="small" variant="contained" color="primary">
                     Beli
                 </Button>
             </CardActions>

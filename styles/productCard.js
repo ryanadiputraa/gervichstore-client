@@ -2,9 +2,15 @@ import { makeStyles } from "@material-ui/core";
 
 const productCard = makeStyles((theme) => ({
     card: {
-        width: 280,
+        display: "inline-block",
+        width: "100%",
+        maxWidth: 300,
         height: 380,
         padding: theme.spacing(1.5),
+        margin: theme.spacing(1),
+        [theme.breakpoints.down("xs")]: {
+            height: 350,
+        },
     },
     media: {
         height: 220,
@@ -20,13 +26,27 @@ const productCard = makeStyles((theme) => ({
     productName: {
         lineHeight: 1.2,
         fontWeight: theme.typography.fontWeightMedium,
+        [theme.breakpoints.down("xs")]: {
+            fontSize: 12,
+        },
     },
     productPrice: {
         fontWeight: theme.typography.fontWeightRegular,
+        [theme.breakpoints.down("xs")]: {
+            fontSize: 12,
+        },
     },
     productAction: {
         padding: 0,
         justifyContent: "flex-end",
+    },
+    actionButton: {
+        height: 34,
+        [theme.breakpoints.down("xs")]: {
+            fontSize: 10,
+            height: 28,
+            minWidth: 40,
+        },
     },
 }));
 
