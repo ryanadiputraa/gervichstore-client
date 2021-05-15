@@ -2,7 +2,8 @@ import { makeStyles } from "@material-ui/core";
 
 const productCard = makeStyles((theme) => ({
     card: {
-        display: "inline-block",
+        display: "flex",
+        flexDirection: "column",
         width: "100%",
         maxWidth: 300,
         height: 380,
@@ -21,7 +22,6 @@ const productCard = makeStyles((theme) => ({
     productContent: {
         padding: theme.spacing(0),
         marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(2),
     },
     productName: {
         lineHeight: 1.2,
@@ -38,7 +38,9 @@ const productCard = makeStyles((theme) => ({
     },
     productAction: {
         padding: 0,
+        flex: 1,
         justifyContent: "flex-end",
+        alignItems: "flex-end",
     },
     actionButton: {
         height: 34,

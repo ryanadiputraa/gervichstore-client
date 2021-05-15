@@ -11,6 +11,7 @@ export let globalState = {
         count: 0,
         messages: [],
     },
+    searchResult: {},
 };
 
 export const reducer = (state, action) => {
@@ -22,6 +23,11 @@ export const reducer = (state, action) => {
                     count: state.cart.count + 1,
                     products: [...state.cart.products, { name: action.input }],
                 },
+            };
+        case "SET_SEARCH_RESULT":
+            return {
+                ...state,
+                searchResult: action.payload,
             };
         default:
             return state;

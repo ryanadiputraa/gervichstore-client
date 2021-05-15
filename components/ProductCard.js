@@ -11,15 +11,15 @@ import { useAppContext } from "../context/AppContext";
 import productCard from "../styles/productCard";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
-export default function ProductCard() {
+export default function ProductCard({ productData }) {
     const styles = productCard();
     const { dispatch } = useAppContext();
 
     return (
-        <Card className={styles.card} elevation={3}>
+        <Card className={styles.card} elevation={3} id={productData.id}>
             <CardMedia
                 className={styles.media}
-                image="/images/item-1.jpg"
+                image={productData.image}
                 title="item-1"
             />
             <CardContent className={styles.productContent}>
@@ -28,7 +28,7 @@ export default function ProductCard() {
                     variant="h6"
                     component="h2"
                 >
-                    Kaos Polos Cotton Combad 30s
+                    {productData.name}
                 </Typography>
                 <Typography
                     className={styles.productPrice}
@@ -36,7 +36,7 @@ export default function ProductCard() {
                     color="error"
                     component="p"
                 >
-                    Rp.50.000
+                    Rp.{productData.price}
                 </Typography>
             </CardContent>
             <CardActions className={styles.productAction}>
