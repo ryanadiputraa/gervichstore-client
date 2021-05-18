@@ -1,12 +1,14 @@
 import { Container } from "@material-ui/core";
 import React from "react";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 export default function Layout({ children }) {
     return (
         <>
             <NavBar />
-            <Container>{children}</Container>
+            <Container style={{ minHeight: "88vh" }}>{children}</Container>
+            <Footer />
         </>
     );
 }

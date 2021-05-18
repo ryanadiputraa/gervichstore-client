@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <React.Fragment>
             <Head>
-                <title>GERVICHSTORE.ID</title>
+                <title>GERVICH_STORE.ID</title>
                 <meta
                     name="viewport"
                     content="minimum-scale=1, initial-scale=1, width=device-width"
