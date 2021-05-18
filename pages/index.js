@@ -46,7 +46,7 @@ export default function Home({ products }) {
                     ) : (
                         <Grid item xs={12}>
                             <Typography variant="h6" align="center">
-                                Terjadi masalah pada server.
+                                Terjadi masalah pada server {":("}
                             </Typography>
                         </Grid>
                     )}

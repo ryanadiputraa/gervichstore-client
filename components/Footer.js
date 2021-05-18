@@ -22,22 +22,26 @@ export default function Footer() {
                             <LocationOnIcon className={styles.infoIcons} />
                             <div>
                                 <Typography>Alamat</Typography>
-                                <Typography>Jl. Dewi Sartika</Typography>
+                                <Typography className={styles.footerSubInfo}>
+                                    Jl. Dewi Sartika, Palu, Sulawesi Tengah
+                                </Typography>
                             </div>
                         </section>
                         <section className={styles.footerInfo}>
                             <PhoneInTalkIcon className={styles.infoIcons} />
                             <div>
                                 <Typography>Kontak</Typography>
-                                <Typography>+62 821-9985-9757</Typography>
+                                <Typography className={styles.footerSubInfo}>
+                                    +62 821-9985-XXXX
+                                </Typography>
                             </div>
                         </section>
                         <section className={styles.footerInfo}>
                             <MailIcon className={styles.infoIcons} />
                             <div>
                                 <Typography>FAQ</Typography>
-                                <Typography>
-                                    CliventSondakh24@gmail.com
+                                <Typography className={styles.footerSubInfo}>
+                                    Gervich_StoreID@gmail.com
                                 </Typography>
                             </div>
                         </section>
@@ -47,39 +51,50 @@ export default function Footer() {
                             IKUTI KAMI DI SOSIAL MEDIA
                         </Typography>
                         <section className={styles.socialSection}>
-                            <Link href="#">
-                                <a className={styles.socialIcons}>
-                                    <Image
-                                        src="/icons/instagram.svg"
-                                        width={30}
-                                        height={30}
-                                        alt="gervichstore instagram"
-                                    />
-                                </a>
-                            </Link>
-                            <Link href="#">
-                                <a className={styles.socialIcons}>
-                                    <Image
-                                        src="/icons/facebook.svg"
-                                        width={30}
-                                        height={30}
-                                        alt="gervichstore facebook"
-                                    />
-                                </a>
-                            </Link>
-                            <Link href="#">
-                                <a className={styles.socialIcons}>
-                                    <Image
-                                        src="/icons/twitter.svg"
-                                        width={30}
-                                        height={30}
-                                        alt="gervichstore twitter"
-                                    />
-                                </a>
-                            </Link>
+                            <a
+                                href="https://www.instagram.com"
+                                target="_blank"
+                                className={styles.socialIcons}
+                            >
+                                <Image
+                                    src="/icons/instagram.svg"
+                                    width={30}
+                                    height={30}
+                                    alt="gervichstore instagram"
+                                />
+                            </a>
+
+                            <a
+                                href="https://www.facebook.com"
+                                target="_blank"
+                                className={styles.socialIcons}
+                            >
+                                <Image
+                                    src="/icons/facebook.svg"
+                                    width={30}
+                                    height={30}
+                                    alt="gervichstore facebook"
+                                />
+                            </a>
+                            <a
+                                href="https://www.twitter.com"
+                                target="_blank"
+                                className={styles.socialIcons}
+                            >
+                                <Image
+                                    src="/icons/twitter.svg"
+                                    width={30}
+                                    height={30}
+                                    alt="gervichstore twitter"
+                                />
+                            </a>
                         </section>
                         <section className={styles.socialSection}>
-                            <Typography>@ Copyright</Typography>
+                            <Typography className={styles.footerSubInfo}>
+                                © 2020 - {new Date().getFullYear()}
+                                {". "}
+                                GERVICH_STORE.ID
+                            </Typography>
                         </section>
                     </Grid>
                 </Grid>

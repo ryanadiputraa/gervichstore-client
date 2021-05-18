@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     return (
         <>
             <NavBar />
-            <Container style={{ minHeight: "88vh" }}>{children}</Container>
+            <Container style={{ minHeight: "80vh" }}>{children}</Container>
             <Footer />
         </>
     );
