@@ -21,7 +21,6 @@ export default function NavBar() {
 
     const classes = navbar();
     const [anchorEl, setAnchorEl] = React.useState(null);
-
     const isMenuOpen = Boolean(anchorEl);
 
     const handleProfileMenuOpen = (event) => {
@@ -30,6 +29,15 @@ export default function NavBar() {
 
     const handleMenuClose = () => {
         setAnchorEl(null);
+    };
+
+    // search function
+    const handleSearch = async (event) => {
+        const res = await fetch(
+            `http://localhost:8080/products?productName=${event.target.value}`
+        );
+        const data = await res.json();
+        console.log(data);
     };
 
     const menuId = "primary-search-account-menu";
@@ -75,6 +83,7 @@ export default function NavBar() {
                                     input: classes.inputInput,
                                 }}
                                 inputProps={{ "aria-label": "search" }}
+                                onChange={(event) => handleSearch(event)}
                             />
                         </div>
                         <div className={classes.grow} />

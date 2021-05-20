@@ -10,6 +10,7 @@ import React from "react";
 import { useAppContext } from "../context/AppContext";
 import productCard from "../styles/productCard";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import ProductModal from "./productModal";
 
 export default function ProductCard({ productData }) {
     const styles = productCard();
@@ -48,14 +49,7 @@ export default function ProductCard({ productData }) {
                     size="medium"
                     endIcon={<AddShoppingCartIcon style={{ marginLeft: -8 }} />}
                 ></Button>
-                <Button
-                    className={styles.actionButton}
-                    size="small"
-                    variant="contained"
-                    color="primary"
-                >
-                    Beli
-                </Button>
+                <ProductModal productData={productData} />
             </CardActions>
         </Card>
     );
